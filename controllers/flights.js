@@ -1,9 +1,23 @@
 const Flight = require('../models/flight');
 
 module.exports = {
+new: newFlight,
+create,
 index,
 show,
-new: newFlight,
+};
+
+function newFlight(req, res) {
+    res.render('flights/new', { title: 'New Flight'});
+};
+
+function create(req, res) {
+    const flight = new Flight(req.body)
+    flight.save(function(err) {
+        if (err) return res.redirect('/flights/new');
+        res.redirect('/flights')
+        console.log(flight)
+    })
 };
 
 function index(req, res) {
@@ -18,6 +32,3 @@ function show(req, res) {
     });
 };
 
-function newFlight(req, res) {
-    res.render('flights/new', { title: 'New Flight'});
-};

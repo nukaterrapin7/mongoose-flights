@@ -9,9 +9,10 @@
 </head>
 <body>
   <nav>
-    <img src="/images/camera.svg">
-    <a href="/flights/new" <%- title === 'New Flight' ? 'class="active"' : '' %>>New Flight</a>
     <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
+    <a href="/flights/new" <%- title === 'New Flight' ? 'class="active"' : '' %>>New Flight</a>
+    <h3>Destination<br>Voyages</h3>
+    <img src="/images/airplane.jpg">
   </nav>
   <main>
     <h1><%= title %></h1>
