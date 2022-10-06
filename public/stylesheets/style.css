@@ -2,7 +2,7 @@
    
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
   color: rgb(151, 15, 15);
 }
 
@@ -18,7 +18,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: rgb(85, 169, 239);
+  background-color: rgb(76, 171, 255);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -125,14 +125,14 @@ table td {
   font-weight: bold;
 }
 
-#add-review-form {
+#add-destination-form {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
 }
 
-#add-review-form input[type="submit"] {
-  width: 8rem;
+#add-destination-form input[type="submit"] {
+  /* width: 8rem; */
   grid-column: 2 / 3;
   margin-bottom: 2rem;
 }
