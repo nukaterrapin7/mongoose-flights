@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 
-    <button type="submit">New Ticket</button>
+    <form action="/flights/<%= flight._id %>/tickets" method="POST">
+        <button type="submit">New Ticket</button>
+    </form>
 
     <section id="show-page">
         <div>Airline</div>
@@ -11,7 +13,6 @@
         <div><%= flight.flightNo %></div>
         <div>Departs</div>
         <div><%= flight.departs %></div>
-        
     </section>
 
     <br><br>

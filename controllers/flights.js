@@ -6,6 +6,7 @@ new: newFlight,
 create,
 index,
 show,
+addToTicket
 };
 
 function newFlight(req, res) {
@@ -38,3 +39,11 @@ function show(req, res) {
     });
 };
 
+function addToTicket(req, res) {
+    Flight.findById(req.params.id, function(err, flight) {
+        flight.ticket.push(req.body.ticketId)
+        flight.save(function(err) {
+            res.redirect(`/flights/${flight._id}`)
+        })
+    })
+};
